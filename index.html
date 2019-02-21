@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tennis</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script src="script.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+	<div class="upper_block">
+		<form class="form1">
+			<div class="addplayer">
+				<label for="name">Добавить нового игрока</label>
+				<p>
+				<input name="name" placeholder="Имя игрока" id="name">
+				<p>
+				<input type="button" name="submit" value="Добавить" class="button_pl" onclick="addName()">
+				<p>
+			</div>
+			<div class="addmatch">
+				<div class="f_row">
+					<input type="datetime-local" name="data" placeholder="Дата матча" id="data">
+					<select id="length">
+						<option selected disabled value="0">До скольки очков</option>
+						<option value="11">11</option>
+						<option value="21">21</option>
+					</select>
+					<input type="text" id="wins">
+					</input>
+				</div>
+				<div class="s_row">
+					<select id="players1">
+						<option selected disabled>Первый игрок</option>
+						<option value="player1">player1</option>
+						<option value="player2">player2</option>
+						<option value="player3">player3</option>
+						<option value="player4">player4</option>
+					</select>
+					<select id="players2">
+						<option selected disabled>Второй игрок</option>
+						<option value="player1">player1</option>
+						<option value="player2">player2</option>
+						<option value="player3">player3</option>
+						<option value="player4">player4</option>
+					</select>
+				</div>
+				<input type="button" name="submit" value="Добавить матч" class="button_match" onclick="addMatch()">
+			</div>
+		</div>
+	</form>
+	<div class="table_1">
+		<table  id="table_1"class="table table-hover">
+				<tr class="bg-success">
+					<th>Игрок</th>
+					<th>vs</th>
+					<th>Игрок</th>
+					<th>№ партии</th>
+					<th>Дата</th>
+					<th>Длительность</th>
+					<th>Количество партий</th>
+					<th>Количество набранных очков</th>
+					<th>Счет по партиям</th>
+					<th></th>
+				</tr>
+		</table>
+	</div>
+</div>
+</body>
+</html>
